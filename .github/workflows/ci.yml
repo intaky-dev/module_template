@@ -30,7 +30,9 @@ jobs:
       - name: Install dependencies
         run: |
           sudo apt update
-          sudo apt install -y git python3-pip build-essential wget node-less libpq-dev
+          sudo apt install -y \
+          git python3-pip build-essential wget node-less libpq-dev \
+          libldap2-dev libsasl2-dev libssl-dev
           pip install wheel setuptools 
           pip install greenlet==2.0.2 gevent==22.10.2
           curl -sSLo full-requirements.txt https://raw.githubusercontent.com/odoo/odoo/18.0/requirements.txt
